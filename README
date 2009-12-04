@@ -69,3 +69,30 @@ Setting Up and Using TickZoom via Git
    data to get started. Contact Wayne to get your Sample data.
    
 The members only site for questions, tickets, and forums is at http://members.tickzoom.com
+
+
+Updating to the latest version using Git:
+
+1. right click in Windows Explorer which on the folder of your TickZoomPublic project.
+
+2. Click on "Git Bash Here"
+
+3. At the command prompt you need to enter the following: 
+   
+   git remote add upstream git://github.com/tickzoom/TickZoomPublic.git
+
+   That commands adds "upstream" as a remote so you can avoid entering the full URL to the TickZoom
+   repository every time you update.
+
+4. Now you can update from the main tickzoom repository by enetering git pull upstream integrate
+
+5. Finally, you should also update your own fork of the project like so: git push
+   That command remembers your "origin" project on GitHub and pushes changes there.
+
+6. If you have modified any of the files it won't let you do either push or pull unless you either commit your
+   changes or else you can "stash" your changes temporarily. Just enter: git stash
+   to stash your changes out of the way while you push and pull. Then enter: git stash appy
+
+7. To recall your changes back to the software. Sometimes you might have conflicts at this point. If so, you
+   can resolve them via TortoiseGit from the Windows Explorer. Select "Check for Modifications" and then you
+   can look at differences in the conflicted files. When you resolve it you can mark them "resolved".
